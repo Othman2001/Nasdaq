@@ -4,17 +4,6 @@ Object.defineProperty(exports, "__esModule", {
   value: true
 });
 exports.StockCall = void 0;
-
-var _memoryCache = _interopRequireDefault(require("memory-cache"));
-
-var _axios = _interopRequireDefault(require("axios"));
-
-var _axiosCacheAdapter = require("axios-cache-adapter");
-
-var _stokcs = require("./stokcs.cahe");
-
-function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { "default": obj }; }
-
 var StockCall = {
   getSocks: function getSocks(url) {
     var response, data;
@@ -32,11 +21,33 @@ var StockCall = {
 
           case 5:
             data = _context.sent;
+            console.log(data, "mock ");
             return _context.abrupt("return", data.results);
 
-          case 7:
+          case 8:
           case "end":
             return _context.stop();
+        }
+      }
+    });
+  },
+  callStockData: function callStockData(url) {
+    var response, data;
+    return regeneratorRuntime.async(function callStockData$(_context2) {
+      while (1) {
+        switch (_context2.prev = _context2.next) {
+          case 0:
+            _context2.next = 2;
+            return regeneratorRuntime.awrap(fetch(url));
+
+          case 2:
+            response = _context2.sent;
+            data = response.json();
+            return _context2.abrupt("return", data);
+
+          case 5:
+          case "end":
+            return _context2.stop();
         }
       }
     });

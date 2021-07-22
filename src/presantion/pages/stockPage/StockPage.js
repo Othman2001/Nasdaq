@@ -15,7 +15,8 @@ function  StockPage() {
   yesterday.setDate(yesterday.getDate() - 2)
 
     const {stock} = useParams();
-    const API_KEY = process.env.REACT_APP_API_KEY;
+    const API_KEY ='TWra6NOMRj9WnT5E5llhDs1c9TipjkjZ';
+
     const URL  = `https://api.polygon.io/v1/meta/symbols/${stock}/company?&apiKey=${API_KEY}`
     const DailyURl = `https://api.polygon.io/v1/open-close/AAPL/${yesterday.toISOString().slice(0,10)}?adjusted=true&apiKey=${API_KEY}`
 const actions = userActions();

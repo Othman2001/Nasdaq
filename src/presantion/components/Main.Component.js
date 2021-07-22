@@ -9,7 +9,8 @@ import { Button} from '../styles/Button.style'
 
 function Main() {
     // calling api key from .env file
-      const API_KEY = process.env.REACT_APP_API_KEY;
+    const API_KEY ='TWra6NOMRj9WnT5E5llhDs1c9TipjkjZ';
+
     const actions = userActions();
     const state = useAppState();
     // end overmind js
