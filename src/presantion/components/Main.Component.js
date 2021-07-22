@@ -15,7 +15,6 @@ function Main() {
     // end overmind js
     // state 
     // 1. state for counting to fetch data
-    const [count, setCount] = useState(0);
     // state for search query to implment live search 
     const [search , setSearch] = useState("")
     // state for limit to implment infnite scroll
@@ -40,7 +39,7 @@ const [limit , setLimit] = useState(10)
 useEffect(()=>{
     // fetch stocks data
         actions.stokcs.fetchStocks(URL);
-    }, [count , search , limit]);
+    }, [  search , limit]);
     
     // function render tickers cards
 const renderTickers = ()=>{
