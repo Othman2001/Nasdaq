@@ -1,0 +1,11 @@
+.App{
+    font-family: 'Rubik', sans-serif;
+  
+    overflow-y: hidden;
+    height: fit-content;
+}
+.card-container{
+    max-width:500px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
